@@ -11,4 +11,7 @@ void to_upper(char* s);
 // Get option letter (0 -> A, 1 -> B, ...)
 const char* option_letter(int index);
 
+// Slowly print text character by character
+void print_slow(const char* text, int delay_us);
+
 #endif
