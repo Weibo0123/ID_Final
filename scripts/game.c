@@ -3,18 +3,13 @@
 #include "nodes.h"
 #include "functions.h"
 
-// Forward declarations
-void clear_screen();
-void to_upper(char* s);
-const char* option_letter(int index);
-
 void run_game() {
     int current = 0;
     char input[16];
 
     while (1) {
         clear_screen();
-        print_slow(nodes[current].text, 75000);  // 45 ms per character
+        //print_slow(nodes[current].text, 75000);  // 75 ms per character
 
         // Display available options
         for (int i = 0; i < MAX_OPTIONS; i++) {
@@ -23,12 +18,14 @@ void run_game() {
             }
         }
 
+        int matched = 0;
+
+        while (!matched)
+        {
         printf("\n> ");
         fgets(input, sizeof(input), stdin);
         input[strcspn(input, "\n")] = '\0';
         to_upper(input);
-
-        int matched = 0;
 
         // Match input with valid options
         for (int i = 0; i < MAX_OPTIONS; i++) {
@@ -47,8 +44,9 @@ void run_game() {
         }
 
         if (!matched) {
-            printf("\nInvalid choice. Try again (A, B, C, or D).\n");
+            printf("\nInvalid choice. Try again.\n");
         }
+    }
     }
 }
 
