@@ -14,7 +14,7 @@ void run_game() {
 
     while (1) {
         clear_screen();
-        printf("%s\n", nodes[current].text);
+        print_slow(nodes[current].text, 15000);  // 15 ms per character
 
         // Display available options
         for (int i = 0; i < MAX_OPTIONS; i++) {
