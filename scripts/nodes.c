@@ -45,7 +45,7 @@ Node nodes[] =
 
     { "Examine the moss", "Check the soil", "Inspect signs of life", "Investigate the water" },
 
-    { 4, 5, 6, 7 } 
+    { 3, 4, 5, 6 } 
     },
 
     {
@@ -62,8 +62,93 @@ Node nodes[] =
 
     { "Check the crops", "Inspect the well", "Examine the soil", "Enter the house" },
 
-    { 8, 9, 10, 11 }
+    { 7, 8, 9, 10 }
 },
+
+// Node 3: Examine the moss
+{
+  "You gently brush away the ash from the rock and uncover a few patches of moss still clinging to the surface.\n"
+"They seem like nature’s final resistance—holding moisture, preserving a trace of life.\n"
+"You recall reading that mosses are 'pioneer species'—they improve microclimates and stabilize soil, paving the way for recovery.\n",
+  { NULL },
+  { -1 }
+},
+
+// Node 4: Check the soil
+{
+  "You crouch down and scrape away the dry top layer.\n"
+"Beneath it lies a waxy, water-repellent texture.\n"
+"This might be 'hydrophobic soil'—a common post-fire phenomenon caused by damaged soil structure and depleted microbes.\n"
+"It blocks water and hinders new growth.",
+  { NULL },
+  { -1 }
+},
+
+// Node 5: Inspect signs of life
+{
+  "In a crack between rocks, you find a small animal corpse—maybe a rabbit.\n"
+"There are no insects. No smell. Just silence.\n"
+"You realize it’s not just death—it’s the absence of decomposers.\n"
+"Without them, life cannot be reborn from what has ended.\n",
+  { NULL },
+  { -1 }
+},
+
+// Node 6: Investigate the water
+{
+  "A shallow puddle rests in a low-lying depression.\n"
+"The surface gleams with a rainbow sheen—still, thick, and strangely silent.\n"
+"Perhaps it’s chemical runoff or heavy metal residue.\n"
+"Without vegetation or flow, the water here is undrinkable.\n"
+"You’ll need to search elsewhere.\n",
+  { NULL },
+  { -1 }
+},
+
+// Node 7: Check the crops
+{
+  "The crops still stand—but they’re dry, brittle, bone-pale.\n"
+"You crack open an ear of corn and recoil at the sharp, bitter odor.\n"
+"The soil here may be tainted by pesticide, chemical fertilizer, or salt buildup from drought.\n"
+"These crops aren’t safe to eat.\n",
+  { NULL },
+  { -1 }
+},
+
+// Node 8: Inspect the well
+{
+  "You approach the rusted well.\n"
+"A sharp blend of iron and decay drifts up from its mouth.\n"
+"You lower a bucket and raise a half-full pail of murky, yellowish water.\n"
+"A faint oil film glimmers on top.\n"
+"The well might be contaminated by chemicals or metals.\n"
+"You’ll need purification—or a new source.\n",
+  { NULL },
+  { -1 }
+},
+
+// Node 9: Examine the soil
+{
+  "You kneel and study the soil.\n"
+"A white, crystalline powder covers the cracked surface—likely salt or chemical deposits.\n"
+"Digging deeper, the earth is dry and compacted.\n"
+"This is classic salinized or polluted soil.\n"
+"Restoring it will take a long, patient process.\n",
+  { NULL },
+  { -1 }
+},
+
+// Node 10: Enter the house
+{
+  "You push open the creaking door. Silence.\n"
+"Inside, you find a few preserved cans and a couple of seed packets.\n"
+"On the table lies a faded hand-drawn map.\n"
+"One path is circled in red with the note: 'South – river?'\n"
+"Whoever lived here knew something—or hoped for it.\n",
+  { NULL },
+  { -1 }
+}
+
     
 
 };
