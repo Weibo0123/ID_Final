@@ -34,9 +34,9 @@ void print_slow(const char* text, int delay_us) {
 }
 
 // Exploration node handler
-void run_exploration_node(int base_node_id, int option_count, int next_node_id) {
+void run_exploration_node(int base_node_id, int option_count, int next_node_id, int max_choices) {
     int visited[4] = {0};
-    int remaining = option_count;
+    int remaining = max_choices;
     int first_time = 1;
 
     while (remaining > 0) {
@@ -46,7 +46,7 @@ void run_exploration_node(int base_node_id, int option_count, int next_node_id) 
             print_slow(nodes[base_node_id].text, 50000);
             first_time = 0;
         } else {
-            printf("You have more to explore here. What do you want to check?\n\n");
+            printf("You have more to do here. What do you want to do?\n\n");
         }
 
         for (int i = 0; i < option_count; i++) {
@@ -101,10 +101,16 @@ void run_node(int start_id) {
 
     while (1) {
         if (current == 1) {
-            run_exploration_node(1, 4, 11); // Forest exploration -> node 20
+            run_exploration_node(1, 4, 11, 4); // Forest exploration -> node 20
             return;
         } else if (current == 2) {
-            run_exploration_node(2, 4, 12); // Farm exploration -> node 21
+            run_exploration_node(2, 4, 12, 4); // Farm exploration -> node 21
+            return;
+        } else if (current == 13) {
+            run_exploration_node(13, 4, 24, 2);
+            return;
+        } else if (current == 14) {
+            run_exploration_node(14, 4, 25, 2);
             return;
         }
 
